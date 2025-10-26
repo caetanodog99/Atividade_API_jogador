@@ -14,11 +14,14 @@ public class player : MonoBehaviour
     private int itensColetados;
     [SerializeField] private GameObject autoSave;
     [SerializeField] private GameObject telaMorte;
+    [SerializeField] private TesteAPI teste;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         vida = 5;
+
     }
 
     void Update()
@@ -61,6 +64,7 @@ public class player : MonoBehaviour
             itemColecionavel Colecao = collider.GetComponent<itemColecionavel>();
             Coletados();
             AutoSave();
+            teste.Coletou();
         }
 
     }
@@ -74,6 +78,8 @@ public class player : MonoBehaviour
     {
         return itensColetados;
     }
+
+
 
     public void AutoSave()
     {

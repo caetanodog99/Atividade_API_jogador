@@ -19,4 +19,6 @@ public class textManager : MonoBehaviour
         if (posicaoYTXT != null) posicaoYTXT.text = "Posição Y: " + jogador.transform.position.y.ToString("F2");
         if (posicaoZTXT != null) posicaoZTXT.text = "Posição Z: " + jogador.transform.position.z.ToString("F2");
     }
+
+
 }
